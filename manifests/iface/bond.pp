@@ -211,14 +211,14 @@ define debnet::iface::bond(
   } else {
     $bondopts0 = {
         'bond-slaves'  => 'none',
-        'bond-primary' => $ports[1],
+        'bond-primary' => $ports[0],
         'bond-mode'    => $mode,
         'bond-miimon'  => $miimon,
       }
     $slave_bondopts = {
         'bond-master'  => $ifname,
         'bond-mode'    => $mode,
-        'bond-primary' => $ports[1],
+        'bond-primary' => $ports[0],
       }
   }
 
